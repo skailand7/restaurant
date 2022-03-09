@@ -7,10 +7,37 @@ const pets = [
 ];
 
 const Local = () => {
+  const onCloseModal = () => {
+    const modal = document.querySelector("#localModal");
+    modal.classList.add("hidden");
+  };
+
   return (
-    <section className="w-full h-screen bg-slate-200  p-4">
-      <div>
+    <section
+      id="localModal"
+      className="hidden w-full h-full fixed top-0 left-0 bottom-0  lg:bg-black/90 flex justify-center z-30"
+    >
+      <div className="bg-slate-200 p-4 lg:w-[700px] lg:h-auto overflow-y-auto overscroll-contain opacity-100">
         <div className="relative">
+          <div
+            onClick={onCloseModal}
+            className="w-8 h-8 flex items-center justify-center brightness-75 rounded-full bg-white absolute top-3 left-3 cursor-pointer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </div>
           <img
             src="https://images.pexels.com/photos/1307698/pexels-photo-1307698.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
             alt="Local de Tu Restaurant"
@@ -99,36 +126,49 @@ const Local = () => {
           </div>
           <div className="w-full text-left bg-white py-6 rounded-xl flex flex-col p-4 mt-4">
             <p className="font-bold">Tambien somos Pet Friendly! 🐶</p>
-            <div className="w-auto h-64 items-center mt-6 overflow-x-auto flex space-x-6">
+            <div className="w-auto h-68 items-center mt-6 overflow-x-auto flex space-x-1">
               <div className="flex flex-col items-center justify-center">
                 <img
                   src="https://images.pexels.com/photos/4587991/pexels-photo-4587991.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
                   alt=""
-                  className=" h-64 rounded-xl"
+                  className=" h-60 rounded-xl"
                 />
-                <div className="w-full w-32">
-                  <p>Hola</p>
+                <div className="w-48 text-center">
+                  <p className="text-[.8rem]">Firulays en el local.</p>
                 </div>
               </div>
-
-              <img
-                src="https://images.pexels.com/photos/4588047/pexels-photo-4588047.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt=""
-                className=" h-64 rounded-xl"
-              />
-              <img
-                src="https://images.pexels.com/photos/11280984/pexels-photo-11280984.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt=""
-                className=" h-64 rounded-xl"
-              />
-              <img
-                src="https://images.pexels.com/photos/9354547/pexels-photo-9354547.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                alt=""
-                className=" h-64 rounded-xl"
-              />
+              <div className="flex flex-col items-center justify-center">
+                <img
+                  src="https://images.pexels.com/photos/4588047/pexels-photo-4588047.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                  alt=""
+                  className=" h-60 rounded-xl"
+                />
+                <div className="w-48 text-center">
+                  <p className="text-[.8rem]">Pepe festejando.</p>
+                </div>
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <img
+                  src="https://images.pexels.com/photos/11280984/pexels-photo-11280984.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                  alt=""
+                  className=" h-60 rounded-xl"
+                />
+                <div className="w-48 text-center">
+                  <p className="text-[.8rem]">Rosa y Cheems.</p>
+                </div>
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <img
+                  src="https://images.pexels.com/photos/9354547/pexels-photo-9354547.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  alt=""
+                  className=" h-60 rounded-xl"
+                />
+                <div className="w-48 text-center">
+                  <p className="text-[.8rem]">Bolt y su familia.</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div></div>
         </div>
       </div>
     </section>

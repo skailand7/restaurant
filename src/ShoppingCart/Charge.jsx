@@ -1,6 +1,12 @@
 import React from "react";
 
 const Charge = () => {
+  const openShoppingCart = () => {
+    const shoppingCart = document.querySelector("#shoppingCart");
+    shoppingCart.classList.contains("hidden")
+      ? shoppingCart.classList.remove("hidden")
+      : shoppingCart.classList.add("hidden");
+  };
   return (
     <div className="px-4 py-8 space-y-8 bg-white rounded-xl">
       <div className="flex justify-center items-center">
@@ -41,9 +47,17 @@ const Charge = () => {
           <span className="font-bold">Forma de pago:</span> Tarjeta
         </p>
       </div>
-      <button className="w-full h-auto p-4 text-white bg-gray-800 rounded-xl">
-        PROCEDER A PAGO
-      </button>
+      <div className="space-y-2">
+        <button className="w-full h-auto p-4 text-white bg-gray-800 rounded-xl">
+          PROCEDER A PAGO
+        </button>
+        <button
+          onClick={openShoppingCart}
+          className="w-full h-auto p-4 text-gray-800 bg-white border-2 border-gray-800 rounded-xl"
+        >
+          CANCELAR
+        </button>
+      </div>
     </div>
   );
 };

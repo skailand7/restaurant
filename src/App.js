@@ -8,6 +8,7 @@ import { Delivery } from "./Home/Delivery/Delivery";
 import { Sections } from "./Home/Sections/Sections";
 import { Footer } from "./Home/Footer/Footer";
 import { ShoppingCart } from "./ShoppingCart/ShoppingCart";
+import { SideMenu } from "./SideMenu/SideMenu";
 
 const shoppingArray = [];
 function App() {
@@ -16,13 +17,14 @@ function App() {
   return (
     <React.Fragment>
       <Header checkoutCantity={checkoutCantity} />
-      <Cover />
+      <Cover checkoutCantity={checkoutCantity} />
       <Main checkout={checkout} setCheckout={setCheckout} />
       <Delivery />
       <Sections />
       <Footer />
       <ShoppingCart checkout={checkout} setCheckout={setCheckout} />
       <Local />
+      <SideMenu checkoutCantity={checkoutCantity} />
     </React.Fragment>
   );
 }

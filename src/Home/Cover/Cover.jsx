@@ -1,13 +1,22 @@
 import React from "react";
 
-const Cover = () => {
+const Cover = (props) => {
   const onOpenModal = () => {
     const modal = document.querySelector("#localModal");
     modal.classList.remove("hidden");
   };
+  const openMenu = () => {
+    const menuContent = document.querySelector("#menuContent");
+    menuContent.classList.contains("hidden")
+      ? menuContent.classList.remove("hidden")
+      : menuContent.classList.add("hidden");
+  };
   return (
     <section className="lg:mt-[60px]">
-      <div className=" bg-white/75 lg:hidden w-10 h-10 rounded-lg flex justify-center items-center absolute top-4 right-4 z-20">
+      <div
+        onClick={openMenu}
+        className="bg-white/75 lg:hidden w-10 h-10 rounded-lg flex justify-center items-center absolute top-4 right-4 z-20"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-6 w-6"
@@ -22,12 +31,25 @@ const Cover = () => {
             d="M4 6h16M4 12h16M4 18h16"
           />
         </svg>
+        {props.checkoutCantity > 0 ? (
+          <div className="h-3 w-3 bg-red-700 absolute top-0 right-0 z-10 rounded-full flex items-center justify-center">
+            <p className="font-bold text-white text-[0.5rem]">
+              {props.checkoutCantity}
+            </p>
+          </div>
+        ) : (
+          <div className="hidden h-3 w-3 bg-red-700 absolute top-0 right-0 z-10 rounded-full flex items-center justify-center">
+            <p className="font-bold text-white text-[0.5rem]">
+              {props.checkoutCantity}
+            </p>
+          </div>
+        )}
       </div>
       <div className="h-auto w-full lg:h-[500px] p-0  relative flex justify-center lg:justify-start">
         <img
           src="https://images.pexels.com/photos/914388/pexels-photo-914388.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
           alt=""
-          className="h-full bg-cover bg-center brightness-[.35] md:hidden lg:hidden"
+          className="h-[600px] object-cover w-full bg-cover bg-center brightness-[.35] md:hidden lg:hidden"
         />
         <img
           src="https://images.pexels.com/photos/5531301/pexels-photo-5531301.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"

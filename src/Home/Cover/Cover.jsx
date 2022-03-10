@@ -6,8 +6,8 @@ const Cover = () => {
     modal.classList.remove("hidden");
   };
   return (
-    <section className="">
-      <div className="bg-white/75 lg:hidden w-10 h-10 rounded-lg flex justify-center items-center absolute top-4 right-4 z-20">
+    <section className="lg:mt-[60px]">
+      <div className=" bg-white/75 lg:hidden w-10 h-10 rounded-lg flex justify-center items-center absolute top-4 right-4 z-20">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-6 w-6"

@@ -1,11 +1,5 @@
 import React from "react";
 
-const pets = [
-  {
-    photo: "",
-  },
-];
-
 const Local = () => {
   const onCloseModal = () => {
     const modal = document.querySelector("#localModal");

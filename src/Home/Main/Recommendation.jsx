@@ -1,24 +1,41 @@
 import React from "react";
 
-const Recommendation = (props) => {
+const Recommendation = ({
+  title,
+  description,
+  img,
+  price,
+  checkout,
+  setCheckout,
+}) => {
+  const onCheckout = (img, title, price) => {
+    const oldArray = [...checkout];
+    const newObjeto = {
+      image: img,
+      title: title,
+      price: price,
+    };
+    oldArray.push(newObjeto);
+    setCheckout(oldArray);
+  };
+
   return (
     <div className="">
       <div className="w-auto h-auto bg-white border-2  rounded-2xl drop-shadow-2xl p-4 space-y-2">
         <img
-          src={props.img}
+          src={img}
           alt=""
           className="h-56 w-full object-cover rounded-2xl"
         />
         <div className="w-80 flex justify-between items-center">
           <div>
-            <p className="text-lg text-gray-700 font-bold">{props.title}</p>
-            <p className="text-md text-red-700">{props.description}</p>
-            <p className="text-2xl text-gray-900 font-extrabold">
-              {props.price}
-            </p>
+            <p className="text-lg text-gray-700 font-bold">{title}</p>
+            <p className="text-md text-red-700">{description}</p>
+            <p className="text-2xl text-gray-900 font-extrabold">{price}</p>
           </div>
           <div className="h-10 w-10 flex justify-center items-center rounded-full border-2 border-red-400 drop-shadow-xl">
             <svg
+              onClick={() => onCheckout(img, title, price)}
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6 text-red-400"
               fill="none"

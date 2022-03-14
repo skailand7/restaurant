@@ -9,7 +9,7 @@ const Charge = () => {
   };
   return (
     <div className="px-4 py-8 space-y-8 bg-white rounded-xl">
-      <div className="flex justify-center items-center">
+      <div className="flex  w-auto justify-center items-center">
         <img
           src="https://logodownload.org/wp-content/uploads/2016/10/visa-logo-1.png"
           alt=""
@@ -19,7 +19,7 @@ const Charge = () => {
           type="text"
           placeholder="card number"
           value="**** **** **** 9060"
-          className="border-2 border-blue-200 ml-2 rounded-xl p-2"
+          className="border-2 w-3/4 text-sm border-blue-200 ml-2 rounded-xl p-2"
           readOnly
         />
         <div className="ml-2 h-8 w-8 rounded-full bg-white drop-shadow-xl flex items-center justify-center">

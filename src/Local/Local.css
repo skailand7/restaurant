@@ -1,0 +1,14 @@
+#localModal {
+  animation-duration: 0.5s;
+  animation-name: localSlide;
+}
+
+@keyframes localSlide {
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}

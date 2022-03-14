@@ -1,0 +1,14 @@
+#menuContent {
+  animation-duration: 0.5s;
+  animation-name: slideMenu;
+}
+
+@keyframes slideMenu {
+  from {
+    margin-top: -40%;
+  }
+
+  to {
+    margin-top: 0%;
+  }
+}

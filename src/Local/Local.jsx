@@ -1,4 +1,5 @@
 import React from "react";
+import "./Local.css";
 
 const Local = () => {
   const onCloseModal = () => {

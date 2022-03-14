@@ -2,7 +2,7 @@ import React from "react";
 
 const Delivery = () => {
   return (
-    <section className="lg:flex p-4">
+    <section id="delivery" className="lg:flex p-4">
       <div className="bg-yellow-200 flex justify-center items-center px-4 m-4 rounded-2xl lg:w-1/2">
         <div className="w-1/2 space-y-4 flex flex-col items-center">
           <p className="text-xl text-center font-bold">

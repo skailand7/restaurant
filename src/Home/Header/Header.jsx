@@ -19,17 +19,17 @@ const Header = (props) => {
       </div>
       <ul className="flex justify-evenly w-3/5 hidden lg:flex">
         <li>
-          <a className="hover:text-red-700 hover:font-bold" href="">
+          <a className="hover:text-red-700 hover:font-bold" href="#delivery">
             UBICACION
           </a>
         </li>
         <li>
-          <a className="hover:text-red-700 hover:font-bold" href="">
+          <a className="hover:text-red-700 hover:font-bold" href="#main">
             MENU
           </a>
         </li>
         <li>
-          <a className="hover:text-red-700 hover:font-bold" href="">
+          <a className="hover:text-red-700 hover:font-bold" href="#footer">
             NOSOTROS
           </a>
         </li>

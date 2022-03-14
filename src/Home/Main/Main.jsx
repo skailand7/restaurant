@@ -138,7 +138,7 @@ const dishesDinner = [
 
 const Main = (props) => {
   return (
-    <section>
+    <section id="main">
       <div>
         <Title />
         <div>

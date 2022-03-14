@@ -1,4 +1,5 @@
 import React from "react";
+import "./SideMenu.css";
 
 const SideMenu = (props) => {
   const openShoppingCart = () => {
@@ -19,7 +20,7 @@ const SideMenu = (props) => {
   return (
     <aside
       id="menuContent"
-      className="hidden h-[400px] w-full  p-8 lg:w-[500px] fixed  top-0 lg:top-[60px] right-0 bottom-0  bg-slate-700 z-40 rounded-l-xl space-y-16 overflow-y-auto rounded-b-2xl drop-shadow-2xl"
+      className="hidden h-[450px] w-full  p-8 lg:w-[500px] fixed  top-0 lg:top-[60px] right-0 bottom-0  bg-slate-700 z-40 rounded-l-xl space-y-16 overflow-y-auto rounded-b-2xl drop-shadow-2xl"
     >
       <div onClick={openMenu} className="flex items-center">
         <div className="w-6 h-6 rounded-full bg-slate-100 drop-shadow-xl flex items-center">
@@ -38,12 +39,14 @@ const SideMenu = (props) => {
             />
           </svg>
         </div>
-        <p className="ml-2 text-white text-2xl">Menu</p>
+        <a href="#menu" className="ml-2 text-white text-2xl">
+          Menu
+        </a>
       </div>
       <div className=" text-gray-100 space-y-4 flex flex-col justify-between">
-        <div className="space-y-4 text-2xl font-bold ">
+        <div className="space-y-4 text-2xl flex flex-col font-bold ">
           <div className="relative">
-            <p onClick={openShoppingCart}>Carrito</p>
+            <a onClick={openShoppingCart}>Carrito</a>
             {props.checkoutCantity > 0 ? (
               <div className="h-3 w-3 bg-red-700 absolute top-2 -left-3 z-10 rounded-full flex items-center justify-center">
                 <p className="font-bold text-white text-[0.5rem]">
@@ -58,10 +61,17 @@ const SideMenu = (props) => {
               </div>
             )}
           </div>
-          <p>Ubicacion</p>
-          <p>Nosotros</p>
-          <p>Contacto</p>
-          <p>Buscar</p>
+          <a onClick={openMenu} href="#delivery">
+            Ubicacion
+          </a>
+          <a onClick={openMenu} href="#footer">
+            Nosotros
+          </a>
+          <a onClick={openMenu} href="#footer">
+            Contacto
+          </a>
+          <a onClick={openMenu}>Buscar</a>
+          <a onClick={openMenu}>Login</a>
         </div>
         <p className="text-md ">Buscanos en redes sociales!</p>
       </div>

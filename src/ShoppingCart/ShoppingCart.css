@@ -1,0 +1,14 @@
+#shoppingCart {
+  animation-duration: 0.3s;
+  animation-name: slideShopping;
+}
+
+@keyframes slideShopping {
+  from {
+    margin-right: -40%;
+  }
+
+  to {
+    margin-rigth: 0%;
+  }
+}

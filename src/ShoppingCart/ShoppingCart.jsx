@@ -3,10 +3,11 @@ import { Discount } from "./Discount";
 import { Items } from "./Items";
 import { Bill } from "./Bill";
 import { Charge } from "./Charge";
+import "./ShoppingCart.css";
 
-const ShoppingCart = ({ checkout, setCheckout }) => {
+const ShoppingCart = ({ checkout, setCheckout, quantity }) => {
   const totalPrice = checkout.reduce(
-    (acc, item) => acc + Number(item.price),
+    (acc, item) => acc + Number(item.price * item.quantity),
     0
   );
   return (
@@ -31,6 +32,9 @@ const ShoppingCart = ({ checkout, setCheckout }) => {
               image={item.image}
               title={item.title}
               price={item.price}
+              quantity={item.quantity}
+              checkout={checkout}
+              setCheckout={setCheckout}
             />
           );
         })

@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <section>
+    <section id="footer">
       <div className="bg-cyan-900 h-auto p-8 flex flex-col">
         <p className="text-xl font-bold text-gray-300">Links utiles</p>
         <a href="" className="text-gray-300 text-md">

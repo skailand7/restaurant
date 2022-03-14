@@ -9,6 +9,7 @@ import { Sections } from "./Home/Sections/Sections";
 import { Footer } from "./Home/Footer/Footer";
 import { ShoppingCart } from "./ShoppingCart/ShoppingCart";
 import { SideMenu } from "./SideMenu/SideMenu";
+import { Login } from "./Login/Login";
 
 const shoppingArray = [];
 function App() {
@@ -25,6 +26,7 @@ function App() {
       <ShoppingCart checkout={checkout} setCheckout={setCheckout} />
       <Local />
       <SideMenu checkoutCantity={checkoutCantity} />
+      <Login />
     </React.Fragment>
   );
 }
